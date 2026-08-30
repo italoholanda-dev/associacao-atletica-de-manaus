@@ -6,7 +6,7 @@ Uma landing page demonstrativa e interativa desenvolvida para a divulgação de 
 
 ## 💻 Demonstração
 
-[🔗 Acessar Site ao Vivo](https://site-corridas-aam.vercel.app/index.html)
+[🔗 Acessar Site ao Vivo](https://site-corridas-aam.vercel.app/)
 
 ---
 
