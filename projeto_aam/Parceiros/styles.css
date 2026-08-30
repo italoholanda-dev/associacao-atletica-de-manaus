@@ -1,0 +1,501 @@
+:root{
+    /* CORES */
+    --bg: #ffffff;
+    --card: #f5fbfb;
+    --muted: #6b6b6b;
+    --accent-1: #0b6b58; /* verde amazônico */
+    --accent-2: #00a6b5; /* azul rio */
+    --accent-3: #f2c94c; /* amarelo solar */
+    --glass: rgba(255,255,255,0.7);
+
+    /* LAYOUT */
+    --radius: 14px;
+    --max-width: 1200px; 
+    --container-pad: 1.25rem;
+
+    /* TIPOGRAFIA */
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Base Reset & Typography */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg) 0%, #e9faf9 100%);
+    color: #153231;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+a { color: var(--accent-2); }
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+h2 { margin: 0 0 0.5rem 0; font-size: 1.8rem; }
+h3 { margin: 0; font-size: 1.25rem; }
+h4 { margin-top: 0; }
+
+/* Container & Sections */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5rem var(--container-pad); 
+}
+.section { padding: 3rem 0; }
+.section.alt { background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(240,250,249,0.9)); }
+
+
+/* Botões */
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.primary {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: white;
+    padding: 0.65rem 1.1rem;
+    border-radius: 10px;
+    border: none;
+}
+.primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-1);
+    border: 2px solid var(--accent-1);
+    padding: 0.55rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.secondary:hover { background: var(--accent-1); color: white; }
+
+.btn.small {
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    background: var(--accent-2);
+    color: white;
+    font-size: 0.9rem;
+}
+.btn.small:hover { background: var(--accent-1); }
+.link { color: var(--accent-1); text-decoration: none; font-weight: 600; }
+.link:hover { text-decoration: underline; }
+/* --- HEADER --- */
+.site-header {
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 18px rgba(5,40,30,0.15);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem var(--container-pad); 
+}
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.4px;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.main-nav a:hover { background: rgba(255,255,255,0.12); }
+.btn.header-btn { 
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.4rem 0.9rem;
+    border-radius: 10px;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Link pai do dropdown */
+.dropbtn {
+    /* Garante que o indicador 'after' do dropbtn seja desativado, pois a seta faz a função */
+    
+}
+
+/* Esconde o conteúdo do dropdown por padrão */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 250px;
+    background: linear-gradient(180deg, var(--accent-1), #085a4a); /* Fundo com gradiente mais escuro */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 101; /* Garante que fique acima de outros elementos (como as sections) */
+    top: 100%; /* Posiciona abaixo do link "Corridas" */
+    left: 0;
+    border-radius: 0 0 8px 8px; /* Arredonda só a parte de baixo */
+    padding: 0.5rem 0;
+}
+
+/* Estilos dos links internos do dropdown */
+.dropdown-content a {
+    color: white; 
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block; /* Ocupa a largura total */
+    text-align: left;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+/* Efeito hover nos links internos */
+.dropdown-content a:hover {
+    background-color: var(--accent-2); /* Azul mais claro no hover */
+}
+
+/* REGRA QUE MOSTRA O DROPDOWN quando a classe 'show' é adicionada via JS */
+.dropdown-content.show {
+    display: block;
+}
+
+
+/* --- FOOTER --- */
+.site-footer {
+    background: #093b30;
+    color: white;
+    padding-top: 3rem;
+}
+.footer-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+    line-height: 1.7;
+}
+.footer-col h3 { font-size: 1.2rem; }
+.footer-col h4 { font-size: 1rem; margin-bottom: 0.75rem; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.footer-col a:hover { color: var(--accent-3); }
+
+.newsletter { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+.newsletter input { 
+    flex: 1; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    border: 0;
+    min-width: 100px;
+}
+.newsletter button { 
+    padding: 0.6rem 1rem; 
+    border-radius: 8px; 
+    border: 0;
+    background: var(--accent-3);
+    color: #153231;
+    font-weight: 700;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0,0,0,0.1);
+    color: rgba(255,255,255,0.7);
+}
+
+/* --- FORMULÁRIO DE INSCRIÇÃO --- */
+.inscricao-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.inscricao-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--accent-1);
+}
+.inscricao-form input[type="text"],
+.inscricao-form input[type="email"],
+.inscricao-form input[type="tel"],
+.inscricao-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--bg);
+}
+.inscricao-form .checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.inscricao-form .checkbox input {
+    margin-right: 0.5rem;
+}
+.inscricao-form .checkbox label {
+    margin: 0;
+    font-weight: 400;
+    color: #333;
+}
+.inscricao-form button.primary {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* --- Race Detail Grid --- */
+.race-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.race-image-container {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.race-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.race-details {
+    padding: 1rem 0;
+}
+.details-box {
+    background-color: var(--card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-top: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+.details-box h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.details-box ul {
+    list-style: none;
+    padding: 0;
+}
+.details-box ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(11, 107, 88, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+.details-box ul li:last-child {
+    border-bottom: none;
+}
+.details-box .label {
+    font-weight: 600;
+    color: var(--accent-1);
+}
+
+/* --- VOLUNTARIADO HERO SECTION --- */
+.voluntariado-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://placehold.co/1200x400/0b6b58/ffffff?text=Imagem+Voluntarios');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    text-align: center;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.voluntariado-hero h1 {
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Parceiros (New Styles) --- */
+
+.partner-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-3);
+}
+
+.partner-tier {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0,0,0,0.1); /* Linha divisória */
+}
+
+.partner-tier:first-of-type {
+    border-top: none; /* Remove a linha do primeiro */
+}
+
+.partner-tier h2 {
+    color: var(--accent-1);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.partner-grid {
+    display: grid;
+    /* Colunas baseadas no tamanho do logo e viewport */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-logo-placeholder {
+    width: 100%;
+    /* Altura proporcional, como 2:1 */
+    padding-top: 50%; 
+    background-color: var(--card); /* Fundo do placeholder */
+    border: 2px solid var(--accent-2);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--accent-1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-logo-placeholder::before {
+    content: "Local para Imagem do Parceiro";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    line-height: 1.3;
+}
+
+.partner-logo-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 166, 181, 0.2); /* Sombra com cor do accent-2 */
+}
+
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    /* Header/Nav */
+    .header-inner { position: relative; }
+    .main-nav { 
+        display: block; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 66px; 
+        background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .main-nav.open {
+        max-height: 400px; 
+        padding: 1rem 0;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: stretch;
+        padding: 0 var(--container-pad);
+    }
+    .main-nav a { 
+        padding: 0.65rem 1rem;
+        border-radius: 4px;
+        display: block;
+    }
+    .main-nav a:hover { background: rgba(255,255,255,0.15); }
+    .main-nav a:not(.btn):after { display: none; }
+    
+    .menu-toggle { display: block; }
+    
+    /* Footer */
+    .footer-inner { flex-direction: column; }
+    .footer-col { min-width: auto; }
+
+    /* Hero */
+    .hero h1, .voluntariado-hero h1 { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+    .countdown-box { gap: 1rem; padding: 0.75rem 1.5rem; }
+    .countdown-item span { font-size: 1.8rem; }
+    
+    /* Race Details */
+    .race-detail-grid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+
+    /* Dropdown */
+    .dropdown {
+        width: 100%;
+    }
+    .dropdown-content {
+        position: relative; /* Ajusta o dropdown para fluir com o conteúdo no mobile */
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background: #085a4a; /* Cor sólida para maior clareza */
+    }
+}
+
+/* Ajuste para mobile: logos um pouco menores e grid mais apertado */
+@media (max-width: 600px) {
+    .partner-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+    h1 { font-size: 2.5rem; }
+}

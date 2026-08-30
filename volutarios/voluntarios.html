@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voluntariado | Associação Atlética Manaus</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER REUTILIZADO -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">AAM | Manaus</a>
+            <nav class="main-nav" aria-label="menu principal">
+                <ul>
+                    <li class="dropdown">
+    <a href="#" class="dropbtn">Corridas</a>
+    
+    <div class="dropdown-content">
+        <a href="../Corrida 1.html">Maratona da Floresta — 42K</a>
+        <a href="../Corrida 2.html">Meia Maratona do Encontro — 21K</a>
+        <a href="../Corrida 3.html">Corrida do Rio — 10K</a>
+        <a href="../Corrida 4.html">Corridinha da Comunidade — 5K</a>
+    </div>
+</li>
+                    <li><a class="btn" href="../Parceiros/parceiros.html">Parceiros</a></li>
+                    <li><a class="btn" href="voluntarios.html">Voluntariado</a></li>
+                    <li><a class="btn" href="../inscricoes.html">Inscreva-se</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+  <!-- FIM HEADER -->
+
+  <main>
+    <!-- HERO SECTION DESTAQUE -->
+    <section class="voluntariado-hero">
+        <div class="container hero-content">
+            <h1>Junte-se ao Time AAM</h1>
+            <p class="hero-subtitle">
+                Seja um voluntário na Maratona da Floresta. Seu apoio é fundamental para celebrarmos a cultura e o esporte amazônico.
+            </p>
+            <a href="#register-form" class="btn primary large">Inscreva-se como Voluntário</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: POR QUE SER VOLUNTÁRIO -->
+    <section class="container section">
+        <h2 class="section-title">Por que se voluntariar?</h2>
+        <div class="grid-3">
+            <div class="feature-card">
+                <h3>Experiência Única</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique tortor sed metus scelerisque, nec efficitur leo fringilla.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Impacto Comunitário</h3>
+                <p>Fusce tincidunt magna eu augue feugiat, ut consequat nulla hendrerit. Etiam id felis egestas, placerat leo quis, rhoncus velit. Duis auctor dolor sit amet.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Rede de Contatos</h3>
+                <p>Aliquam sed nunc sed purus facilisis tempor a at ex. Curabitur vitae justo in metus finibus pulvinar. Mauris at ipsum magna. Praesent in risus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: Destaque de Imagem (Placeholder) e Texto -->
+    <section class="full-width-section bg-secondary">
+        <div class="container content-image-grid">
+            <div class="content-text">
+                <h2 class="h1">Onde sua ajuda faz a diferença</h2>
+                <p>Nunc nec nisl in quam sodales gravida. Nullam a felis a dolor mollis volutpat. Sed a bibendum leo. Sed vehicula sapien vel nunc hendrerit ultrices. Donec sed nunc eget nisi luctus tincidunt eu at purus. In hac habitasse platea dictumst. </p>
+                <p>Suspendisse potenti. Ut ac turpis a ante venenatis facilisis. Integer eget sapien at velit commodo facilisis. **Participe em uma de nossas quatro provas:** desde a Corridinha da Comunidade (5K) até a Maratona da Floresta (42K).</p>
+                <a href="#available-roles" class="btn secondary">Ver Funções Disponíveis</a>
+            </div>
+            <div class="content-image-placeholder">
+                <p>Placeholder de Imagem para Voluntários (800x600)</p>
+                <!-- Dica: Substitua por uma imagem de alta qualidade, ex: /images/time-voluntarios.jpg -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: FUNÇÕES DISPONÍVEIS -->
+    <section class="container section" id="available-roles">
+        <h2 class="section-title">Funções e Requisitos Comuns</h2>
+        <div class="role-grid">
+            <!-- FUNÇÃO 1 -->
+            <div class="role-card">
+                <h4>Apoio no Percurso (Course Support)</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel purus dolor. Donec interdum, enim at accumsan finibus. **Requisito:** Disposição para ficar em pé por longos períodos.</p>
+            </div>
+            <!-- FUNÇÃO 2 -->
+            <div class="role-card">
+                <h4>Logística de Chegada (Finish Line)</h4>
+                <p>Vivamus id nisl a est fringilla venenatis. Integer eget sapien at velit commodo facilisis. **Requisito:** Energia e capacidade de trabalhar sob pressão na área da chegada.</p>
+            </div>
+            <!-- FUNÇÃO 3 -->
+            <div class="role-card">
+                <h4>Retirada de Kits (Bib Pick-up)</h4>
+                <p>Sed a bibendum leo. Sed vehicula sapien vel nunc hendrerit ultrices. **Requisito:** Habilidade com atendimento ao público e organização.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: FORMULÁRIO DE INSCRIÇÃO -->
+    <section class="container section" id="register-form">
+        <h2 class="section-title center">Formulário de Voluntariado</h2>
+        <p class="center max-w-lg">Preencha o formulário para expressar seu interesse em nos ajudar nas próximas corridas. Entraremos em contato em breve!</p>
+
+        <form class="inscricao-form voluntario-form">
+            <label for="v-nome">Nome Completo</label>
+            <input type="text" id="v-nome" name="nome" required>
+
+            <label for="v-email">Email</label>
+            <input type="email" id="v-email" name="email" required>
+
+            <label for="v-telefone">Telefone (com DDD)</label>
+            <input type="tel" id="v-telefone" name="telefone" required>
+
+            <label for="v-corrida">Preferência de Evento (Opcional)</label>
+            <select id="v-corrida" name="corrida">
+                <option value="">Qualquer evento</option>
+                <option value="42k">Maratona da Floresta — 42K</option>
+                <option value="21k">Meia Maratona do Encontro — 21K</option>
+                <option value="10k">Corrida do Rio — 10K</option>
+                <option value="5k">Corridinha da Comunidade — 5K</option>
+            </select>
+
+            <label for="v-mensagem">Mensagem / Habilidades Especiais (Opcional)</label>
+            <textarea id="v-mensagem" name="mensagem" rows="4"></textarea>
+
+            <div class="checkbox">
+                <input type="checkbox" id="v-termos" name="termos" required>
+                <label for="v-termos">Aceito receber informações sobre voluntariado via email.</label>
+            </div>
+
+            <button type="submit" class="primary">Enviar Inscrição de Voluntário</button>
+        </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER REUTILIZADO -->
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-col">
+                    <h3>Associação Atlética Manaus</h3>
+                    <p>Promovendo esporte, saúde e cultura amazônica em Manaus.</p>
+                    <p class="muted small">699 Rua das Flores, Manaus · contato@aam-manaus.org</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Corridas</a></li>
+                        <li><a href="../Parceiros/parceiros.html">Parceiros</a></li>
+                        <li><a href="voluntarios.html">Voluntariado</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fique por dentro</h4>
+                    <p>Inscreva-se na newsletter para receber novidades sobre inscrições e rotas.</p>
+                    <form class="newsletter" action="#" method="post" onsubmit="alert('Obrigado! (formulário de demonstração)'); return false;">
+                        <input type="email" placeholder="seu-email@exemplo.com" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © <span id="year"></span> Associação Atlética Manaus — Todos os direitos reservados.
+            </div>
+        </footer>
+  <!-- FIM FOOTER -->
+  
+  <script>
+    // Se o menu mobile estiver em uso, o JavaScript do toggle deve ser mantido
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        if (toggleButton && mainNav) {
+            toggleButton.addEventListener('click', function() {
+                mainNav.classList.toggle('open');
+            });
+        }
+        
+        // Funcionalidade para o Dropdown de Corridas
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        if (dropbtn && dropdownContent) {
+            dropbtn.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                dropdownContent.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        }
+    });
+
+  </script>
+</body>
+</html>

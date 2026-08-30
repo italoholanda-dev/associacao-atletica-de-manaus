@@ -1,0 +1,614 @@
+:root{
+    /* CORES */
+    --bg: #ffffff;
+    --card: #f5fbfb;
+    --muted: #6b6b6b;
+    --accent-1: #0b6b58; /* verde amazônico */
+    --accent-2: #00a6b5; /* azul rio */
+    --accent-3: #f2c94c; /* amarelo solar */
+    --glass: rgba(255,255,255,0.7);
+
+    /* LAYOUT */
+    --radius: 14px;
+    --max-width: 1200px; 
+    --container-pad: 1.25rem;
+
+    /* TIPOGRAFIA */
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Base Reset & Typography */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg) 0%, #e9faf9 100%);
+    color: #153231;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+a { color: var(--accent-2); }
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+h2 { margin: 0 0 0.5rem 0; font-size: 1.8rem; }
+h3 { margin: 0; font-size: 1.25rem; }
+h4 { margin-top: 0; }
+
+/* Container & Sections */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5rem var(--container-pad); 
+}
+.section { padding: 3rem 0; }
+.section.alt { background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(240,250,249,0.9)); }
+
+
+/* Botões */
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.primary {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: white;
+    padding: 0.65rem 1.1rem;
+    border-radius: 10px;
+    border: none;
+}
+.primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-1);
+    border: 2px solid var(--accent-1);
+    padding: 0.55rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.secondary:hover { background: var(--accent-1); color: white; }
+
+.btn.small {
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    background: var(--accent-2);
+    color: white;
+    font-size: 0.9rem;
+}
+.btn.small:hover { background: var(--accent-1); }
+.link { color: var(--accent-1); text-decoration: none; font-weight: 600; }
+.link:hover { text-decoration: underline; }
+
+
+/* Header & Navigation */
+.site-header {
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 18px rgba(5,40,30,0.15);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem var(--container-pad); 
+}
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.4px;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.main-nav a:hover { background: rgba(255,255,255,0.12); }
+.btn.header-btn { 
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.4rem 0.9rem;
+    border-radius: 10px;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section (Com imagem de fundo) */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center top 20%; /* FOCA no topo para mostrar o Teatro Amazonas */
+    background-repeat: no-repeat;
+    min-height: 550px; 
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* Levemente mais escuro para melhor contraste */
+}
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+}
+.hero-text {
+    flex: 1;
+    max-width: 60%; 
+}
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.lead {
+    color: #f0f0f0; 
+    margin: 0 0 1.5rem 0;
+    font-size: 1.15rem;
+}
+
+/* Contagem Regressiva */
+.countdown {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem 0;
+}
+.countdown div {
+    background: var(--glass);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    min-width: 75px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(13,57,50,0.1);
+    color: #153231;
+}
+.countdown strong {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-1);
+}
+.countdown span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--muted);
+}
+.hero-cta a { margin-right: 0.75rem; }
+
+/* Races Grid (Cards com Imagem) */
+.races-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.race-card {
+    /* Estilos para usar background-image */
+    background-size: cover;
+    background-position: center; /* Ponto central da imagem */
+    background-repeat: no-repeat; /* EVITA REPETIÇÃO DA IMAGEM */
+    height: 300px;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* AJUSTES INDIVIDUAIS PARA MELHOR CORTE (Foco no ponto principal da imagem) */
+.race-card:nth-child(1) { /* Maratona da Floresta (Corrida de rua) */
+    background-position: center 40%; 
+}
+.race-card:nth-child(2) { /* Meia Maratona do Encontro (Rio Negro) */
+    background-position: center; 
+}
+.race-card:nth-child(3) { /* Corrida do Rio (Floresta) */
+    background-position: center bottom; /* Foca mais na floresta */
+}
+.race-card:nth-child(4) { /* Corridinha da Comunidade (Voluntário) */
+    background-position: center; 
+}
+/* FIM DOS AJUSTES INDIVIDUAIS */
+
+.race-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* REGRA ATUALIZADA para melhorar o contraste e adicionar o blur */
+.race-card .race-overlay { 
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75)); /* Começa o preto do topo (0%) e é mais opaco (0.75) */
+    backdrop-filter: blur(2px); /* Adiciona o desfoque sutil na imagem de fundo */
+    width: 100%;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+/* FIM DA REGRA ATUALIZADA */
+
+/* NOVO BLOCO: Estilos para o título da corrida como link (efeito sublinhado) */
+.race-card .race-title-link {
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: white;
+    transition: color 0.2s, text-decoration 0.2s; /* Adiciona transição para o sublinhado e cor */
+}
+
+/* Efeito de Sublinhado e Cor ao passar o mouse (HOVER) */
+.race-card .race-title-link:hover {
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+    color: var(--accent-3); /* Opcional: muda a cor no hover para dar feedback (amarelo) */
+}
+
+.race-card .race-title-link h3 {
+    margin: 0; /* Remove a margem padrão do h3 para encostar no link */
+}
+/* FIM DO NOVO BLOCO */
+
+.race-card h3 { font-size: 1.4rem; }
+.race-card .meta { 
+    color: rgba(255,255,255,0.85); 
+    font-size: 0.95rem; 
+    margin-bottom: 0;
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.program-card {
+    background: var(--card);
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(6,40,35,0.06);
+    border-left: 4px solid var(--accent-2);
+}
+.program-card p { color: var(--muted); }
+
+/* Partners */
+.partners-grid {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+.partner {
+    background: var(--card);
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(6,40,35,0.08);
+    font-weight: 600;
+    color: var(--accent-1);
+    font-size: 0.9rem;
+}
+
+/* Volunteer Section */
+#volunteer {
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+#volunteer p { max-width: 600px; margin: 1rem auto 2rem auto; }
+
+/* Footer */
+.site-footer {
+    background: #093b30;
+    color: white;
+    padding-top: 3rem;
+}
+.footer-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+    line-height: 1.7;
+}
+.footer-col h3 { font-size: 1.2rem; }
+.footer-col h4 { font-size: 1rem; margin-bottom: 0.75rem; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.footer-col a:hover { color: var(--accent-3); }
+
+.newsletter { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+.newsletter input { 
+    flex: 1; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    border: 0;
+    min-width: 100px;
+}
+.newsletter button { 
+    padding: 0.6rem 1rem; 
+    border-radius: 8px; 
+    border: 0;
+    background: var(--accent-3);
+    color: #153231;
+    font-weight: 700;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0,0,0,0.1);
+    color: rgba(255,255,255,0.7);
+}
+
+
+/* --- RESPONSIVIDADE --- */
+
+/* Tablet/Small Desktop (max-width: 900px) */
+@media (max-width: 900px) {
+    .header-inner { padding: 0.75rem var(--container-pad); }
+    .hero-inner { flex-direction: column; align-items: flex-start; }
+    .hero-text { max-width: 100%; text-align: center; } /* CENTRALIZA TEXTO NO MOBILE */
+    .hero h1 { font-size: 2rem; }
+    .hero { min-height: 400px; } /* Altura menor no mobile */
+    .hero-cta { 
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .hero-cta a { margin-right: 0; width: 100%; }
+    .countdown { justify-content: center; }
+    
+    .races-grid { gap: 1rem; }
+
+    /* Navegação Mobile */
+    .main-nav { 
+        display: block; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 66px; 
+        background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .main-nav.open {
+        max-height: 400px; 
+        padding: 1rem 0;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: stretch;
+        padding: 0 var(--container-pad);
+    }
+    .main-nav a { 
+        padding: 0.65rem 1rem;
+        border-radius: 4px;
+        display: block;
+    }
+    .main-nav a:hover { background: rgba(255,255,255,0.15); }
+
+    .menu-toggle { display: block; }
+
+    /* Footer */
+    .footer-inner { flex-direction: column; }
+    .footer-col { min-width: auto; }
+}
+
+/* Mobile Devices (max-width: 650px) */
+@media (max-width: 650px) {
+    :root { --container-pad: 1rem; }
+    .container { padding: 2rem var(--container-pad); }
+    
+    .races-grid { grid-template-columns: 1fr; }
+    .programs-grid { grid-template-columns: 1fr; }
+    .race-card { height: 200px; }
+
+    .hero-text { text-align: center; }
+    .countdown div { min-width: 60px; padding: 0.5rem; }
+    .countdown strong { font-size: 1.4rem; }
+    
+    .newsletter { flex-direction: column; }
+    .newsletter input, .newsletter button { width: 100%; }
+}
+
+/* FORMULÁRIO DE INSCRIÇÃO (ESPECÍFICO para inscricoes.html) */
+.inscricao-form {
+    max-width: 500px; /* Limita a largura para melhor legibilidade */
+    margin: 2rem auto; /* Centraliza o formulário */
+    padding: 2.5rem;
+    background: var(--card); /* Fundo branco para parecer um "card" flutuante */
+    border-radius: var(--radius); /* Cantos arredondados (14px) */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave para destacar */
+    display: flex; /* Flexbox para organizar os campos */
+    flex-direction: column;
+    gap: 1rem; /* Espaçamento entre os campos */
+}
+
+.inscricao-form label {
+    display: block;
+    font-weight: 600; /* Semidegrido para labels */
+    margin-bottom: 0.35rem;
+    color: #153231;
+}
+
+/* Estilização dos campos de texto e seleção */
+.inscricao-form input:not([type="checkbox"]), 
+.inscricao-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem;
+    color: #153231;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+/* Foco e destaque */
+.inscricao-form input:not([type="checkbox"]):focus,
+.inscricao-form select:focus {
+    border-color: var(--accent-2); /* Borda azul ao focar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 166, 181, 0.15); /* Sombra sutil com a cor azul */
+}
+
+/* Estilo para a seta de dropdown (select) */
+.inscricao-form select {
+    /* SVG para seta customizada, mantendo a estética limpa */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b6b6b' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.75rem;
+    padding-right: 2.5rem;
+}
+
+/* Estilo para o checkbox de regulamento */
+.inscricao-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.inscricao-form .checkbox label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.inscricao-form .checkbox input[type="checkbox"] {
+    /* Usa a cor de destaque da marca (verde) */
+    accent-color: var(--accent-1); 
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+/* Força o botão primário a ocupar 100% dentro do formulário */
+.inscricao-form button[type="submit"].primary {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.race-detail-image {
+    width: 100%; /* Esta é a regra principal! */
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #e0e0e0; /* Fundo cinza para o placeholder */
+    object-fit: cover;
+}
+
+/* --- ESTILOS PARA DROPDOWN DE CORRIDAS --- */
+
+/* Contêiner principal (o LI) */
+.dropdown {
+    position: relative; /* Essencial para que o menu flutue corretamente */
+    display: inline-block;
+}
+
+/* O botão/link principal */
+.dropbtn {
+    /* Mantém os mesmos estilos dos outros links de navegação */
+}
+
+/* O conteúdo do menu flutuante */
+.dropdown-content {
+    display: none; /* ESCONDE o menu por padrão */
+    position: absolute;
+    background-color: var(--accent-1); /* Cor de fundo do dropdown */
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101; /* Garante que fique acima de outros elementos (como as sections) */
+    top: 100%; /* Posiciona abaixo do link "Corridas" */
+    left: 0;
+    border-radius: 0 0 8px 8px; /* Arredonda só a parte de baixo */
+    padding: 0.5rem 0;
+}
+
+/* Estilos dos links internos do dropdown */
+.dropdown-content a {
+    color: white; 
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block; /* Ocupa a largura total */
+    text-align: left;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+/* Efeito hover nos links internos */
+.dropdown-content a:hover {
+    background-color: var(--accent-2); /* Azul mais claro no hover */
+}
+
+/* REGRA QUE MOSTRA O DROPDOWN quando a classe 'show' é adicionada via JS */
+.dropdown-content.show {
+    display: block;
+}
+
+/* AJUSTE PARA MOBILE: O dropdown deve ser apenas um item listado */
+@media (max-width: 900px) {
+    .dropdown {
+        width: 100%; /* Ocupa a largura total no menu mobile */
+    }
+    .dropdown-content {
+        position: static; /* Não flutua no menu mobile, fica abaixo do botão */
+        box-shadow: none;
+        min-width: 100%;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.1); /* Um fundo sutil para diferenciar */
+        padding: 0;
+        margin-top: -0.25rem; /* Puxa para cima para ficar junto */
+    }
+    .dropdown-content a {
+        padding-left: 1.5rem; /* Recuo para mostrar que são sub-itens */
+    }
+}

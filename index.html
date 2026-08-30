@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Associação Atlética Manaus — Corridas na Amazônia</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Celebrando a resistência e a beleza amazônica — corrida de 5K, 10K, meia e maratona em Manaus.">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">AAM | Manaus</a>
+            <nav class="main-nav" aria-label="menu principal">
+                <ul>
+                    <li class="dropdown">
+    <a href="#" class="dropbtn">Corridas</a>
+    
+    <div class="dropdown-content">
+        <a href="Corrida 1.html">Maratona da Floresta — 42K</a>
+        <a href="Corrida 2.html">Meia Maratona do Encontro — 21K</a>
+        <a href="Corrida 3.html">Corrida do Rio — 10K</a>
+        <a href="Corrida 4.html">Corridinha da Comunidade — 5K</a>
+    </div>
+</li>
+                    <li><a class="btn" href="Parceiros/parceiros.html">Parceiros</a></li>
+                    <li><a class="btn" href="volutarios/voluntarios.html">Voluntariado</a></li>
+                    <li><a class="btn" href="inscricoes.html">Inscreva-se</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title" style="background-image:url('images/hero-manaus.jpg')">
+            <div class="overlay"></div> 
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1 id="hero-title">Corridas da Amazônia — Manaus</h1>
+                    <p class="lead">Corrida, cultura e natureza no coração da floresta tropical. Celebrando a resistência e a beleza amazônica.</p>
+
+                    <div class="countdown" aria-live="polite">
+                        <div><strong id="days">00</strong><span>Dias</span></div>
+                        <div><strong id="hours">00</strong><span>Horas</span></div>
+                        <div><strong id="minutes">00</strong><span>Min</span></div> 
+                        <div><strong id="seconds">00</strong><span>Seg</span></div> 
+                    </div>
+
+                    <p class="hero-cta">
+                        <a class="primary" href="#races">Ver Corridas</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="races" class="container section">
+            <h2>As Corridas</h2>
+            <p class="muted">Competições por toda a cidade, celebrando o esporte e a floresta. Todas as provas acontecem em Manaus.</p>
+
+            <div class="races-grid">
+                <article class="race-card" style="background-image:url('images/corrida-manaus.jpg')">
+                    <div class="race-overlay">
+                        <a class="race-title-link" href="Corrida 1.html">
+                            <h3>Maratona da Floresta — 42K</h3>
+                        </a>
+                        <p class="meta">15 de Agosto de 2026 · Ponta Negra</p>
+                        <a href="inscricoes.html" class="btn small">Inscreva-se</a>
+                    </div>
+                </article>
+
+                <article class="race-card" style="background-image:url('images/rio-negro.jpg')">
+                    <div class="race-overlay">
+                        <a class="race-title-link" href="Corrida 2.html">
+                            <h3>Meia Maratona do Encontro — 21K</h3>
+                        </a>
+                        <p class="meta">12 de setembro de 2026 · Centro Histórico</p>
+                        <a href="inscricoes.html" class="btn small">Inscreva-se</a>
+                    </div>
+                </article>
+
+                <article class="race-card" style="background-image:url('images/floresta.jpg')">
+                    <div class="race-overlay">
+                        <a class="race-title-link" href="Corrida 3.html">
+                            <h3>Corrida do Rio — 10K</h3>
+                        </a>
+                        <p class="meta">03 de outubro de 2026 · Orla do Rio Negro</p>
+                        <a href="inscricoes.html" class="btn small">Inscreva-se</a>
+                    </div>
+                </article>
+
+                <article class="race-card" style="background-image:url('images/voluntarios.jpg')">
+                    <div class="race-overlay">
+                        <a class="race-title-link" href="Corrida 4.html">
+                            <h3>Corridinha da Comunidade — 5K</h3>
+                        </a>
+                        <p class="meta">20 de novembro de 2026 · Parque dos Bilhares</p>
+                        <a href="inscricoes.html" class="btn small">Inscreva-se</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+
+        <section id="partners" class="container section">
+            <h2>Parceiros</h2>
+            <p class="muted">Apoiadores da comunidade e do esporte local.</p>
+
+            <div class="partners-grid">
+                <div class="partner">Secretaria Municipal de Esportes</div>
+                <div class="partner">Instituto Ambiental da Amazônia</div>
+                <div class="partner">Patrocínio: Banco Regional</div>
+                <div class="partner">Clínica do Corredor Manaus</div>
+            </div>
+        </section>
+
+        <section id="volunteer" class="section alt">
+            <div class="container">
+                <h2>Seja Voluntário</h2>
+                <p>Junte-se à equipe de organização — suporte em hidratação, logística, kit e segurança.</p>
+                <a class="btn primary" href="volutarios/voluntarios.html">Quero ser voluntário</a>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-col">
+                    <h3>Associação Atlética Manaus</h3>
+                    <p>Promovendo esporte, saúde e cultura amazônica em Manaus.</p>
+                    <p class="muted small">699 Rua das Flores, Manaus · contato@aam-manaus.org</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#races">Corridas</a></li>
+                        <li><a href="Parceiros/parceiros.html">Parceiros</a></li>
+                        <li><a href="volutarios/voluntarios.html">Voluntariado</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fique por dentro</h4>
+                    <p>Inscreva-se na newsletter para receber novidades sobre inscrições e rotas.</p>
+                    <form class="newsletter" action="#" method="post" onsubmit="alert('Obrigado! (formulário de demonstração)'); return false;">
+                        <input type="email" placeholder="seu-email@exemplo.com" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © <span id="year"></span> Associação Atlética Manaus — Todos os direitos reservados.
+            </div>
+        </footer>
+    </main>
+    <script>
+    // Espera o HTML carregar ANTES de rodar qualquer script
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- INÍCIO: O SEU CÓDIGO DO DROPDOWN (Menu) ---
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        if (dropbtn && dropdownContent) {
+            // Alterna a classe 'show' para mostrar/esconder o menu
+            dropbtn.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o link '#' de rolar a página para o topo
+                dropdownContent.classList.toggle('show');
+            });
+
+            // Fecha o dropdown se o usuário clicar fora dele
+            document.addEventListener('click', function(e) {
+                if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        }
+        const dataDoEventoString = "sep 12, 2026 08:00:00"; 
+        const dataDoEvento = new Date(dataDoEventoString).getTime();
+
+        const elDias = document.getElementById("days");
+        const elHoras = document.getElementById("hours");
+        const elMinutos = document.getElementById("minutes");
+        const elSegundos = document.getElementById("seconds");
+        
+        const elContainer = document.querySelector('.countdown'); 
+
+        if (!elDias || !elHoras || !elMinutos || !elSegundos) {
+            console.error("ERRO: Não encontrei os elementos 'days', 'hours', 'minutes', 'seconds'.");
+        } else {
+            const intervalo = setInterval(function() {
+                
+                const agora = new Date().getTime();
+                const distancia = dataDoEvento - agora;
+
+                if (distancia < 0) {
+                    clearInterval(intervalo);
+                    if(elContainer) {
+                       elContainer.innerHTML = "<div style='color: white; font-size: 1.5rem; text-align: center;'>A CORRIDA COMEÇOU!</div>";
+                    } else {
+                       elDias.parentElement.innerHTML = "Evento Iniciado!";
+                    }
+                    return; 
+                }
+
+                const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+                elDias.innerText = dias < 10 ? "0" + dias : dias;
+                elHoras.innerText = horas < 10 ? "0" + horas : horas;
+                elMinutos.innerText = minutos < 10 ? "0" + minutos : minutos;
+                elSegundos.innerText = segundos < 10 ? "0" + segundos : segundos;
+
+            }, 1000); 
+        }
+
+    }); // Fim do 'DOMContentLoaded'
+</script>
+    
+</body>
+</html>
