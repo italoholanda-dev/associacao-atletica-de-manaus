@@ -1,12 +1,12 @@
 # 🏃‍♂️ Associação Atlética de Manaus (AAM) - Plataforma de Corridas
 
-Uma landing page interativa desenvolvida para a divulgação de maratonas e eventos esportivos promovidos por uma associação atlética fictícia. O projeto visa centralizar informações de percursos, inscrições e engajamento da comunidade esportiva na capital amazonense.
+Uma landing page demonstrativa e interativa desenvolvida para a divulgação de maratonas e eventos esportivos promovidos por uma associação atlética fictícia. O projeto visa centralizar informações de percursos, inscrições e engajamento da comunidade esportiva na capital amazonense.
 
 ---
 
 ## 💻 Demonstração
 
-*(Insira o link da Vercel aqui: `[🔗 Acessar Site ao Vivo](https://seu-link.vercel.app)`)*
+[🔗 Acessar Site ao Vivo](https://site-corridas-aam.vercel.app/index.html)
 
 ---
 
