@@ -31,14 +31,17 @@ body {
     color: #153231;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.5;
+    line-height: 1.65;
+    letter-spacing: -0.005em;
 }
 a { color: var(--accent-2); }
 .muted { color: var(--muted); }
 .small { font-size: 0.9rem; }
-h2 { margin: 0 0 0.5rem 0; font-size: 1.8rem; }
+h1 { font-size: clamp(1.9rem, 3.8vw, 2.55rem); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+h2 { margin: 0 0 0.65rem 0; font-size: clamp(1.45rem, 2.5vw, 1.85rem); line-height: 1.25; letter-spacing: -0.015em; }
 h3 { margin: 0; font-size: 1.25rem; }
 h4 { margin-top: 0; }
+hr { border: 0; height: 1px; background: rgba(11, 107, 88, 0.15); margin: 2.5rem 0; }
 
 /* Container & Sections */
 .container {
@@ -552,11 +555,117 @@ h4 { margin-top: 0; }
 
 .race-detail-image {
     width: 100%; /* Esta é a regra principal! */
-    height: auto;
+    height: 350px;
+    max-height: 360px;
+    display: block;
     border-radius: var(--radius);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     background-color: #e0e0e0; /* Fundo cinza para o placeholder */
     object-fit: cover;
+}
+
+/* --- PÁGINA DE DETALHES DAS CORRIDAS --- */
+.page-title {
+    font-size: clamp(1.85rem, 3.5vw, 2.45rem);
+    margin: 0 0 0.35rem 0;
+    color: var(--accent-1);
+    font-weight: 700;
+}
+
+.race-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin: 1.75rem 0 2.5rem 0;
+}
+
+.race-image-container {
+    position: relative;
+}
+
+.race-image-container p {
+    margin: 0.6rem 0 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.race-content h2 {
+    font-size: 1.5rem;
+    color: var(--accent-1);
+    margin: 0 0 1rem 0;
+}
+
+.race-content p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: #1f3d3b;
+    margin: 0 0 1rem 0;
+}
+
+.race-highlights {
+    list-style: none;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0 1.5rem 0;
+    background: var(--card);
+    border-left: 4px solid var(--accent-2);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(6,40,35,0.06);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 1rem;
+    font-size: 0.94rem;
+}
+
+.race-highlights li strong {
+    color: var(--accent-1);
+}
+
+.race-content .primary {
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+.map-section h2 {
+    color: var(--accent-1);
+    margin-bottom: 0.5rem;
+}
+
+.google-map {
+    margin-top: 1.25rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.google-map iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+}
+
+@media (max-width: 900px) {
+    .race-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+    .race-detail-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 650px) {
+    .race-detail-image {
+        height: 220px;
+    }
+    .race-highlights {
+        grid-template-columns: 1fr;
+    }
+    .google-map iframe {
+        height: 260px;
+    }
 }
 
 /* --- ESTILOS PARA DROPDOWN DE CORRIDAS --- */

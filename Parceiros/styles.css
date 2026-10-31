@@ -387,7 +387,61 @@ h4 { margin-top: 0; }
     justify-items: center;
 }
 
-.partner-logo-placeholder {
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.partner-grid.community-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.partner-card {
+    background-color: var(--card);
+    border: 1px solid rgba(0, 166, 181, 0.25);
+    border-top: 4px solid var(--accent-2);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 8px 22px rgba(6, 40, 35, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 166, 181, 0.16);
+}
+
+.partner-badge {
+    align-self: flex-start;
+    background: rgba(11, 107, 88, 0.1);
+    color: var(--accent-1);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+}
+
+.partner-card h3 {
+    color: var(--accent-1);
+    font-size: 1.15rem;
+    margin: 0.2rem 0;
+}
+
+.partner-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.partner- logo-placeholder, .partner-logo-placeholder {
     width: 100%;
     /* Altura proporcional, como 2:1 */
     padding-top: 50%; 

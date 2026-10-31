@@ -451,7 +451,7 @@ h4 { margin-top: 0; }
 /* --- ESTILOS PARA A PÁGINA DE VOLUNTARIADO (voluntariado.html) --- */
 
 .voluntariado-hero {
-    background-image: url('images/voluntarios.jpg'); /* Reutilizando imagem existente */
+    background-image: url('../img/voluntarios.jpg'); /* Imagem oficial de voluntários */
     background-size: cover;
     background-position: center 70%;
     padding: 6rem 0;
@@ -505,6 +505,18 @@ h4 { margin-top: 0; }
 .content-text h2 {
     margin-bottom: 1rem;
     color: var(--accent-1);
+}
+.volunteer-image-wrapper {
+    width: 100%;
+}
+.volunteer-section-image {
+    width: 100%;
+    height: 340px;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 28px rgba(5,40,30,0.14);
+    display: block;
 }
 .content-image-placeholder {
     height: 400px;
@@ -641,6 +653,7 @@ h4 { margin-top: 0; }
     .content-text {
         padding: 0;
     }
+    .volunteer-section-image { height: 260px; }
     .content-image-placeholder {
         height: 300px;
     }
