@@ -263,7 +263,7 @@ h4 { margin-top: 0; }
     margin-bottom: 0.4rem;
     color: #333;
 }
-.inscricao-form input, .inscricao-form select {
+.inscricao-form input, .inscricao-form select, .inscricao-form textarea {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #ccc;
@@ -271,7 +271,7 @@ h4 { margin-top: 0; }
     font-size: 1rem;
     transition: border-color 0.2s;
 }
-.inscricao-form input:focus, .inscricao-form select:focus {
+.inscricao-form input:focus, .inscricao-form select:focus, .inscricao-form textarea:focus {
     border-color: var(--accent-2);
     outline: none;
 }
@@ -558,6 +558,7 @@ h4 { margin-top: 0; }
 .voluntario-form textarea {
     min-height: 100px;
     resize: vertical;
+    font-family: inherit;
 }
 
 
