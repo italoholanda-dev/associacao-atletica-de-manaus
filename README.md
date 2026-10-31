@@ -1,27 +1,9 @@
-<div align="center">
-
 # 🏃‍♂️ Associação Atlética de Manaus (AAM) — Plataforma Oficial de Corridas
 
-**Plataforma Web Institucional e Interativa de Eventos Esportivos de Rua na Amazônia**
-
-[![Vercel Deploy](https://img.shields.io/badge/Vercel-Online-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://site-corridas-aam.vercel.app/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-
-<p align="center">
-  <a href="#-demonstração-ao-vivo-deploy">Demonstração</a> •
-  <a href="#-calendário-oficial-de-provas--temporada-2026">Calendário 2026</a> •
-  <a href="#-principais-funcionalidades-e-destaques-técnicos">Funcionalidades</a> •
-  <a href="#-estrutura-do-projeto">Estrutura</a> •
-  <a href="#-tecnologias-utilizadas">Tecnologias</a> •
-  <a href="#-como-executar-localmente">Execução</a> •
-  <a href="#-autor-e-contato">Contato</a>
-</p>
-
-</div>
-
----
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 Plataforma web institucional e interativa desenvolvida para a **Associação Atlética de Manaus (AAM)**, projetada para centralizar a divulgação do calendário anual de corridas de rua na capital amazonense, detalhamento técnico de percursos, captação de patrocinadores, programa de voluntariado e inscrição de atletas.
 
@@ -29,7 +11,7 @@ Plataforma web institucional e interativa desenvolvida para a **Associação Atl
 
 ## 🌐 Demonstração ao Vivo (Deploy)
 
-👉 **[Acessar Plataforma na Vercel (site-corridas-aam.vercel.app)](https://site-corridas-aam.vercel.app/)**
+👉 **[Acessar Plataforma no Vercel](https://site-corridas-aam.vercel.app/)**
 
 ---
 
@@ -113,17 +95,6 @@ associacao-atletica-de-manaus/
 
 ---
 
-## 👨‍💻 Autor e Contato
+## 👨‍💻 Autor
 
-Desenvolvido por **Italo Holanda Neves** — Graduando em Análise e Desenvolvimento de Sistemas (Faculdade de Tecnologia Senac Amazonas) e Desenvolvedor Web no IDESAM.
-
-- 🌐 **Portfólio Oficial:** [portfolio-italo-murex.vercel.app](https://portfolio-italo-murex.vercel.app/)
-- 💼 **LinkedIn:** [linkedin.com/in/italo-holanda](https://www.linkedin.com/in/italo-holanda/)
-- 🐙 **GitHub:** [github.com/italoholanda-dev](https://github.com/italoholanda-dev)
-- 📧 **E-mail:** [italoholanda90@gmail.com](mailto:italoholanda90@gmail.com)
-
----
-
-<div align="center">
-  <sub>© 2026 Italo Holanda Neves. Todos os direitos reservados.</sub>
-</div>
+Desenvolvido por **Italo Holanda** — [Portfólio](https://portfolio-italo-murex.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/italo-holanda/) · [GitHub](https://github.com/italoholanda-dev)
