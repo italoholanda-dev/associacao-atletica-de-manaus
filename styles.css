@@ -183,10 +183,22 @@ h4 { margin-top: 0; }
 }
 
 /* Contagem Regressiva */
+.countdown-label {
+    margin: 0 0 0.4rem 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--accent-3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.countdown-label span {
+    color: #ffffff;
+}
 .countdown {
     display: flex;
     gap: 0.75rem;
-    margin: 1.25rem 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
 }
 .countdown div {
     background: var(--glass);
@@ -448,6 +460,7 @@ h4 { margin-top: 0; }
     .race-card { height: 200px; }
 
     .hero-text { text-align: center; }
+    .countdown-label { font-size: 0.8rem; }
     .countdown div { min-width: 60px; padding: 0.5rem; }
     .countdown strong { font-size: 1.4rem; }
     
