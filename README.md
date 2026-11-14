@@ -95,6 +95,6 @@ associacao-atletica-de-manaus/
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-Desenvolvido por **Italo Holanda** — [Portfólio](https://portfolio-italo-murex.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/italo-holanda/) · [GitHub](https://github.com/italoholanda-dev)
+Desenvolvido por **Felipe Alves,Italo Holanda, Mateus Hendell, Thiago Marinho**
